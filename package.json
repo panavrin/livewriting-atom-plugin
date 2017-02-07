@@ -1,0 +1,19 @@
+{
+  "name": "atom-angular",
+  "main": "./lib/main",
+  "version": "0.1.0",
+  "description": "A help request platform",
+  "keywords": [],
+  "repository": "https://github.com/cromaLab/atom-codeon",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+	"jquery": "latest",
+	"angular": "latest",
+	"underscore": "latest",
+	"fs-extra": "latest",
+	"atom-helpers": "latest"
+  }
+}
