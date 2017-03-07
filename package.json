@@ -32,12 +32,15 @@
   },
   "dependencies": {
 	"jquery": "latest",
-  "jquery": "latest",
   "jquery-ui": "latest",
 	"angular": "latest",
 	"underscore": "latest",
 	"fs-extra": "latest",
 	"atom-helpers": "latest",
-  "livewriting": "latest"
+  "livewriting": "latest",
+  "atom-utils": "latest",
+  "event-kit": "latest",
+  "lodash": "latest",
+  "space-pen": "latest"
   }
 }
