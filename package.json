@@ -38,9 +38,6 @@
 	"fs-extra": "latest",
 	"atom-helpers": "latest",
   "livewriting": "latest",
-  "atom-utils": "latest",
-  "event-kit": "latest",
-  "lodash": "latest",
-  "space-pen": "latest"
+  "atom-utils": "latest"
   }
 }
