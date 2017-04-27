@@ -1,13 +1,20 @@
 <div ng-controller="ActiveFilesController" style="padding:10px" id = "active_files_list_controller">
-  {{recordingMessage}}<br/>
-  List of file names:<br/>
-  <ul style="list-style-type:none; padding:0px" id = "active_files_list_controller">
-    <div ng-repeat="file in FileListData">
-      <li>
-        <input type="checkbox" ng-disabled="file.disabled" ng-model="file.checked"/>
-        {{file.name}}
-      </li>
-    </div>
-  </ul>
-  <button type="button" id="record" ng-click="record()">Record</button>
+  <button type="button" id="record_button_radio" ng-click="dropdown()">{{recordingMessage}}</button>
+  <br/>
+  <div ng-if="isExpanded">
+    List of file names:<br/>
+    <ul style="list-style-type:none; padding:0px" id = "active_files_list_controller">
+      <div ng-repeat="file in FileListData">
+        <li>
+          <!-- <input type="checkbox" ng-disabled="file.disabled" ng-model="file.checked"/> -->
+          <input type="radio" ng-disabled="file.disabled" ng-checked="file.checked"
+                              ng-click="handle_radio_change(file)"/>
+          {{file.name}}
+        </li>
+      </div>
+    </ul>
+  </div>
+  <div ng-if="isSelected">
+    <button type="button" id="record_button_radio" ng-click="record_radio()">{{recordingButtonMessage}}</button>
+  </div>
 </div>
