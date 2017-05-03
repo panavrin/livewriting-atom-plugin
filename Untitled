@@ -1,0 +1,13 @@
+hide and show record button
+set up alert if closing editor window
+
+model options:
+store hidden file in same directory when stopped
+local database
+server
+
+Create view that grabs from recordings for given file and displays it
+
+Make more visually appealing - using bootstrap
+- install node module
+- create index.less file - check in inspector if it is added automatically

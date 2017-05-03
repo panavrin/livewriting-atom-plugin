@@ -38,6 +38,7 @@
 	"fs-extra": "latest",
 	"atom-helpers": "latest",
   "livewriting": "latest",
-  "atom-utils": "latest"
+  "atom-utils": "latest",
+  "bootstrap": "latest"
   }
 }

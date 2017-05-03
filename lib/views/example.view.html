@@ -1,9 +1,9 @@
+<link rel="stylesheet/less" type="text/css" href="index.less" />
 <div ng-controller="ActiveFilesController" style="padding:10px" id = "active_files_list_controller">
-  <button type="button" id="record_button_radio" ng-click="dropdown()">{{recordingMessage}}</button>
-  <br/>
+  <button class="btn-primary btn-block" ng-click="dropdown()">{{recordingMessage}}</button>
   <div ng-if="isExpanded">
     List of file names:<br/>
-    <ul style="list-style-type:none; padding:0px" id = "active_files_list_controller">
+    <ul style="list-style-type:none; padding:0px">
       <div ng-repeat="file in FileListData">
         <li>
           <!-- <input type="checkbox" ng-disabled="file.disabled" ng-model="file.checked"/> -->
@@ -15,6 +15,9 @@
     </ul>
   </div>
   <div ng-if="isSelected">
-    <button type="button" id="record_button_radio" ng-click="record_radio()">{{recordingButtonMessage}}</button>
+    <button class="btn-success btn-block" ng-if="!isRecording" ng-click="record_radio()">{{recordingButtonMessage}}</button>
+    <button class="btn-danger btn-block" ng-if="isRecording" ng-click="record_radio()">{{recordingButtonMessage}}</button>
+    <button class="btn btn-danger btn-block" ng-if="isRecording" ng-click="record_radio()">{{recordingButtonMessage}}</button>
+    <button class="btn btn-warning btn-block" ng-if="isRecording" ng-click="record_radio()">{{recordingButtonMessage}}</button>
   </div>
 </div>
