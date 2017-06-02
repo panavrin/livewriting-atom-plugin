@@ -1,19 +1,43 @@
 {
-  "name": "atom-angular",
+  "name": "livewriting-atom-plugin",
   "main": "./lib/main",
-  "version": "0.1.0",
-  "description": "A help request platform",
-  "keywords": [],
-  "repository": "https://github.com/cromaLab/atom-codeon",
+  "version": "0.2.6",
+  "description": "Live Writing - Asynchronous Playback of Writing and Programming",
+  "keywords": [
+    "programming",
+    "writing",
+    "live",
+    "coding",
+    "replay",
+    "recording"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/panavrin/livewriting-atom-plugin.git"
+  },
+  "author": "Sang Won Lee <sangwonlee717@gmail.com> (http://www.sangwonlee.com)",
+  "licenses": [
+  {
+    "type": "MIT",
+    "url": "https://github.com/panavrin/livewriting#readme"
+  }
+  ],
+  "bugs": {
+    "url": "https://github.com/panavrin/livewriting/issues"
+  },
+  "homepage": "https://github.com/panavrin/livewriting#readme",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
 	"jquery": "latest",
+  "jquery-ui": "latest",
 	"angular": "latest",
 	"underscore": "latest",
 	"fs-extra": "latest",
-	"atom-helpers": "latest"
+	"atom-helpers": "latest",
+  "livewriting": "latest",
+  "atom-utils": "latest"
   }
 }
