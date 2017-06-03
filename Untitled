@@ -11,3 +11,14 @@ Create view that grabs from recordings for given file and displays it
 Make more visually appealing - using bootstrap
 - install node module
 - create index.less file - check in inspector if it is added automatically
+
+Information for adding new folder:
+window.requestFileSystem(window.TEMPORARY, 1024*1024, function(fs) {
+  fs.root.getDirectory('YourDirectoryName', {create: true}, function(entry) {
+    ...
+  }, err);
+}, err);
+
+Look into hiding hidden files on treeview for atom
+
+Gitrepo ignored files
