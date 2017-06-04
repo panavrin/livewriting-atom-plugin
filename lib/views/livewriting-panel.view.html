@@ -1,0 +1,35 @@
+<link rel="stylesheet/less" type="text/css" href="index.less" />
+<div ng-controller="ActiveFilesController" style="padding:10px" id="active_files_controller">
+  <button class="btn-primary btn-block" ng-click="dropdown()">{{recordingMessage}}</button>
+  <div ng-if="isExpanded">
+    List of file names:<br/>
+    <ul style="list-style-type:none; padding:0px">
+      <div ng-repeat="file in FileListData">
+        <li>
+          <input type="radio" ng-disabled="file.disabled" ng-checked="file.checked"
+                              ng-click="handle_radio_change(file)"/>
+          {{file.name}}
+        </li>
+      </div>
+    </ul>
+  </div>
+  <div ng-if="isSelected">
+    <button class="btn-success btn-block" ng-if="!isRecording" ng-click="record()">{{recordingButtonMessage}}</button>
+    <button class="btn-warning btn-block" ng-if="isRecording" ng-click="record()">{{recordingButtonMessage}}</button>
+  </div>
+</div>
+<div ng-controller="ViewRecordingController" style="padding:10px" id="view_recording_controller">
+  <button class="btn-primary btn-block" ng-click="readInFiles()">{{openFileListMessage}}</button>
+  <div ng-repeat="fileName in fileData.keys()">
+    <li>
+      <button ng-click="expand(fileName)">{{fileName}}</button>
+      <div ng-if="fileName == selectedFile">
+        <div ng-repeat="recording in fileData[fileName]">
+          <li>
+            {{recording}}
+          </li>
+        </div>
+      </div>
+    </li>
+  </div>
+</div>
