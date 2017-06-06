@@ -20,13 +20,13 @@
 </div>
 <div ng-controller="ViewRecordingController" style="padding:10px" id="view_recording_controller">
   <button class="btn-primary btn-block" ng-click="readInFiles()">{{openFileListMessage}}</button>
-  <div ng-repeat="fileName in fileData.keys()">
+  <div ng-repeat="fileName in returnKeys()">
     <li>
-      <button ng-click="expand(fileName)">{{fileName}}</button>
+      <input type="radio" ng-click="expand(fileName)">{{fileName}}</button>
       <div ng-if="fileName == selectedFile">
         <div ng-repeat="recording in fileData[fileName]">
           <li>
-            {{recording}}
+            <input type="radio">{{recording}}</button>
           </li>
         </div>
       </div>
