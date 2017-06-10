@@ -1,0 +1,17 @@
+'menu' : [
+  {
+    'label': 'View'
+    'submenu': [
+      { 'label': 'Toggle Livewriting', 'command': 'livewriting-atom-plugin:toggle' }
+    ]
+  }
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'Livewriting'
+      'submenu': [
+        { 'label': 'Toggle', 'command': 'livewriting-atom-plugin:toggle' }
+      ]
+    ]
+  }
+]
