@@ -2,7 +2,7 @@
 <div ng-controller="ActiveFilesController" style="padding:10px" id="active_files_controller">
   <button class="btn-primary btn-block" ng-click="dropdown()">{{recordingMessage}}</button>
   <div ng-if="isExpanded">
-    List of file names:<br/>
+    List of open files:<br/>
     <form action="">
       <div ng-repeat="file in FileListData">
           <input type="radio" ng-disabled="file.disabled" ng-checked="file.checked"
@@ -19,13 +19,14 @@
 <div ng-controller="ViewRecordingController" style="padding:10px" id="view_recording_controller">
   <button class="btn-primary btn-block" ng-click="dropdown()">{{openFileListMessage}}</button>
   <div ng-if="isExpanded">
+    List of recording files:<br/>
     <form action="">
       <div ng-repeat="fileName in returnKeys()">
         <input type="radio" ng-click="handle_radio_file_change(fileName)"
                ng-checked="fileName == selectedFile" name="recording_fileName">
                {{fileName}}
         </input>
-        <div ng-if="fileName == selectedFile">
+        <div ng-if="fileName == selectedFile" ng-style="{'margin-left': '15px'}">
           <div ng-repeat="recordingName in fileData.get(fileName)">
               <input type="radio" ng-click="handle_radio_recording_change(recordingName)"
                      ng-checked="recordingName == selectedRecording" name="recording_fileTime">
