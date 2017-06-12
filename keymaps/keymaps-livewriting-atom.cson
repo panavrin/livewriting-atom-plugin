@@ -1,0 +1,6 @@
+'.platform-darwin':
+  'cmd-l cmd-w': 'livewriting-atom-plugin:toggle'
+'.platform-win32, .platform-linux':
+  'ctrl-l ctrl-w': 'livewriting-atom-plugin:toggle'
+#'.platform-darwin .livewriting-atom-plugin':
+#'.platform-win32 .livewriting-atom-plugin, .platform-linux .livewriting-atom-plugin':
